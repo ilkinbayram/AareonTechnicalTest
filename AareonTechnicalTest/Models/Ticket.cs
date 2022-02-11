@@ -1,14 +1,14 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using AareonTechnicalTest.Models.BaseModels;
+using System.Collections.Generic;
 
 namespace AareonTechnicalTest.Models
 {
-    public class Ticket
+    public class Ticket : BaseEntity
     {
-        [Key]
-        public int Id { get; }
-
         public string Content { get; set; }
 
         public int PersonId { get; set; }
+
+        public virtual List<Note> Notes { get; set; }
     }
 }
